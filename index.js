@@ -112,7 +112,7 @@ sayilar.forEach((elements) => {
        enbuyuk = elements; 
     }
 })
-console.log(`en küçük sayı: ${enkucuk}, en büyük sayı: ${enbuyuk}`);
+console.log(`en küçük sayı= ${enkucuk}, en büyük sayı= ${enbuyuk}`);
 
 
 // 3b çözümü:

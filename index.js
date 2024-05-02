@@ -126,19 +126,44 @@ sayilar.forEach((elements1) => {
 console.log(ucetambolunenler)
 // 3c çözümü:
 
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc,item) =>{
+  acc += item;
+  return acc;
+},0)
+console.log(ucebolunenlerintoplami);
 
 
 // 3d çözümü
 
-/* kodlar buraya */
-
+besyuzdenkucuksayilar = sayilar.filter((sayi) => {
+  if(sayi < 500){
+    return sayi;
+  }
+})
+console.log(besyuzdenkucuksayilar);
 // 3e çözümü
 
-/* kodlar buraya */
 
+siralisayilar = besyuzdenkucuksayilar.sort(function(a,b){return a - b});
+console.log(siralisayilar);
 // 3f çözümü
+tekraredensayilar = [];
+ obj = sayilar.reduce((acc,sayi) => {
+    if(acc[sayi] == undefined){
+      acc[sayi] = 1;
+    }else{
+      acc[sayi]++;
+    }
+    return acc;
+},{})
 
-/* kodlar buraya */
+sayilar.forEach((sayi) => {
+    if(obj[sayi] > 1){
+      tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} tekrar edilmiştir`)
+    }
+})
+console.log(obj);
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 

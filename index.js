@@ -39,9 +39,9 @@ const sayilar = [
 function KareninAlani(kenaruzunlugu) {
   return kenaruzunlugu * kenaruzunlugu;
 }
-
+console.log(KareninAlani(10));
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
+//console.log(KareninAlani(10));
 /* GÖREV 1:  
 - CemberinCevresi fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
 	1. CemberinCevresi fonksiyonu parametre olarak sadece çemberin yarıçapını alacaktır. 
@@ -50,9 +50,11 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yariCap) {
+  cevre = 2 * pi * yariCap;
+  return cevre;
 }
+console.log(CemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -64,9 +66,11 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yariCap,piSayisi) {
+  const alan = piSayisi * Math.pow(yariCap,2);
+  return alan;
 }
+console.log(CemberinAlani(15,pi));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -98,16 +102,31 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+enkucuk = sayilar[0];
+enbuyuk = sayilar[0];
+sayilar.forEach((elements) => {
+    if(elements < enkucuk){
+      enkucuk = elements;
+    }
+    if(elements > enbuyuk){
+       enbuyuk = elements; 
+    }
+})
+console.log(`en küçük sayı: ${enkucuk}, en büyük sayı: ${enbuyuk}`);
 
-/* kodlar buraya */
 
 // 3b çözümü:
 
-/* kodlar buraya */
-
+ucetambolunenler = [];
+sayilar.forEach((elements1) => {
+  if(elements1 % 3 == 0){
+    ucetambolunenler.push(elements1);
+  }
+})
+console.log(ucetambolunenler)
 // 3c çözümü:
 
-/* kodlar buraya */
+
 
 // 3d çözümü
 

@@ -157,6 +157,7 @@ tekraredensayilar = [];
     return acc;
 },{})
 
+
 sayilar.forEach((sayi) => {
     if(obj[sayi] > 1){
       tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} tekrar edilmiştir`)

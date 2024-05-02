@@ -51,7 +51,7 @@ console.log(KareninAlani(10));
 */
 
 function CemberinCevresi(yariCap) {
-  cevre = 2 * pi * yariCap;
+  let cevre = 2 * pi * yariCap;
   return cevre;
 }
 console.log(CemberinCevresi(5));
@@ -66,11 +66,11 @@ console.log(CemberinCevresi(5));
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(yariCap,piSayisi) {
-  const alan = piSayisi * Math.pow(yariCap,2);
+function CemberinAlani(yariCap, piSayisi) {
+  const alan = piSayisi * Math.pow(yariCap, 2);
   return alan;
 }
-console.log(CemberinAlani(15,pi));
+console.log(CemberinAlani(15, pi));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -105,63 +105,62 @@ let ucetambolunenler,
 enkucuk = sayilar[0];
 enbuyuk = sayilar[0];
 sayilar.forEach((elements) => {
-    if(elements < enkucuk){
-      enkucuk = elements;
-    }
-    if(elements > enbuyuk){
-       enbuyuk = elements; 
-    }
-})
+  if (elements < enkucuk) {
+    enkucuk = elements;
+  }
+  if (elements > enbuyuk) {
+    enbuyuk = elements;
+  }
+});
 console.log(`en küçük sayı= ${enkucuk}, en büyük sayı= ${enbuyuk}`);
-
 
 // 3b çözümü:
 
 ucetambolunenler = [];
 sayilar.forEach((elements1) => {
-  if(elements1 % 3 == 0){
+  if (elements1 % 3 == 0) {
     ucetambolunenler.push(elements1);
   }
-})
-console.log(ucetambolunenler)
+});
+console.log(ucetambolunenler);
 // 3c çözümü:
 
-ucebolunenlerintoplami = ucetambolunenler.reduce((acc,item) =>{
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc, item) => {
   acc += item;
   return acc;
-},0)
+}, 0);
 console.log(ucebolunenlerintoplami);
-
 
 // 3d çözümü
 
 besyuzdenkucuksayilar = sayilar.filter((sayi) => {
-  if(sayi < 500){
+  if (sayi < 500) {
     return sayi;
   }
-})
+});
 console.log(besyuzdenkucuksayilar);
 // 3e çözümü
 
-
-siralisayilar = besyuzdenkucuksayilar.sort(function(a,b){return a - b});
+siralisayilar = besyuzdenkucuksayilar.sort(function (a, b) {
+  return a - b;
+});
 console.log(siralisayilar);
 // 3f çözümü
 tekraredensayilar = [];
- obj = sayilar.reduce((acc,sayi) => {
-    if(acc[sayi] == undefined){
-      acc[sayi] = 1;
-    }else{
-      acc[sayi]++;
-    }
-    return acc;
-},{})
+let obj = sayilar.reduce((acc, sayi) => {
+  if (acc[sayi] == undefined) {
+    acc[sayi] = 1;
+  } else {
+    acc[sayi]++;
+  }
+  return acc;
+}, {});
 
 sayilar.forEach((sayi) => {
-    if(obj[sayi] > 1){
-      tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} tekrar edilmiştir`);
-    }
-})
+  if (obj[sayi] > 1) {
+    tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} kere tekrar edilmiştir`);
+  }
+});
 
 console.log(tekraredensayilar);
 

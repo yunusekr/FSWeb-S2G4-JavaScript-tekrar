@@ -157,13 +157,12 @@ tekraredensayilar = [];
     return acc;
 },{})
 
-
 sayilar.forEach((sayi) => {
     if(obj[sayi] > 1){
-      tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} tekrar edilmiştir`)
+      tekraredensayilar.push(`${sayi} sayısı ${obj[sayi]} tekrar edilmiştir`);
     }
 })
-console.log(obj);
+
 console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
